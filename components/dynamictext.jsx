@@ -4,15 +4,13 @@ import { useState, useEffect } from "react";
 const DynamicText = () => {
   const phrases = [
     "Software Engineer.",
-    "Full Stack Developer.",
     "Problem Solver.",
     "Tech Enthusiast.",
   ];
 
   // Colors for each phrase to mimic code syntax
   const phraseColors = [
-    "text-blue-500",   // color for "Software Engineer."
-    "text-green-500",  // color for "Full Stack Developer."
+    "text-green-500",   // color for "Software Engineer."
     "text-yellow-500", // color for "Problem Solver."
     "text-red-500",    // color for "Tech Enthusiast."
   ];
@@ -24,7 +22,7 @@ const DynamicText = () => {
 
   const pauseBetweenPhrases = 1500; // pause after typing a full phrase
 
-  useEffect(() => {
+  useEffect(() => { 
     let timeout;
 
     if (isDeleting) {
@@ -55,8 +53,8 @@ const DynamicText = () => {
   }, [currentText, isDeleting, currentPhraseIndex]);
 
   return (
-    <h1 className="text-4xl">
-      I am a{" "}
+    <h1 className="text-3xl">
+      I am{" "}
       <span className={`${phraseColors[currentPhraseIndex]} font-mono`}>
         {currentText}
       </span>
